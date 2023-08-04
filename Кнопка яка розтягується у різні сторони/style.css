@@ -1,0 +1,55 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #8BC6EC;
+    background-image: linear-gradient(225deg, #8BC6EC 0%, #9599E2 100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    padding: 15px 45px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: plum;
+    color: #8BC6EC;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn:hover {
+    animation: stretching 0.8s;
+}
+
+@keyframes stretching {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        transform: scale3d(1.25, 0.75 ,1);
+    }
+    40% {
+        transform: scale3d(0.75, 1.25 ,1);
+    }
+    50% {
+        transform: scale3d(1.15, 0.85 ,1);
+    }
+    60% {
+        transform: scale3d(0.95, 1.05 ,1);
+    }
+    75% {
+        transform: scale3d(1.05, 0/95 ,1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
