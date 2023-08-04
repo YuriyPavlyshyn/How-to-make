@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: move 12s linear infinite alternate;
+}
+
+@keyframes move {
+    0% {
+        background: #f1c40f;
+    }
+    20% {
+        background: #e67e22; 
+    }
+    40% {
+        background: #e74c3c; 
+    }
+    60% {
+        background: #27ae60;
+    }
+    80% {
+        background: #3498db;
+    }
+    100% {
+        background: #9b59b6;
+    }
+
+}
+.title {
+    font-size: 35px;
+    color: wheat;
+    font-weight: 800;
+}

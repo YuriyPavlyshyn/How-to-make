@@ -1,0 +1,45 @@
+body {
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    background: blue;
+    border: none;
+    padding: 20px;
+    width: 200px;
+    color: white;
+    font-size: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.7s;
+    box-shadow: 0 0 20px white;
+}
+
+.btn span {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.btn span::after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.7s;
+}
+
+.btn:hover span {
+    padding-right: 25px;
+}
+
+.btn:hover span::after {
+    opacity: 1;
+    right: 0;
+}

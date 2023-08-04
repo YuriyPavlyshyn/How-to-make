@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>!!! Логін Форма з синхронізацією передачі даних в Google Sheets таблиці</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/383912c291.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- !!! Не можу знайти причини у звязку із чим не відбувається синхронізація з гугл таблицями -->
+
+<!-- Для синхронізації даних з таблицями гугл шітс потрібно здійснити певні дії: ресурс-відео урок: https://www.youtube.com/watch?v=3wg4SazgGPs&list=PLIEunNjc9Uyt-wFImpReJ1RNSqDq_gti0&index=157 (кроки для синхронізації з 13 хвилини) -->
+
+<!-- скрипт для підключення Google Sheets: https://github.com/jamiewilson/form-to-google-sheets -->
+
+    <div class="container">
+        <form action="#" class="login-form" name="submit-to-google-sheet">
+            <h2>Login Form</h2>
+            <input type="text" name="Name" id="Name" autocomplete="off" placeholder="Enter your name ...">
+            <input type="email" name="email" id="email" autocomplete="off" placeholder="Enter your email ..." required>
+            <input type="password" name="password" id="password" autocomplete="off" placeholder="Enter your password ..." required>
+            <button type="submit"><i class="fa-sharp fa-solid fa-paper-plane"></i></button>
+
+            <span id="sendText"></span>
+        </form>
+    </div>
+    
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzygofqMAvKU7aNrXQmgSMgr6RjZ44AuU546bmd02rTunJoz5HR-cfzRlp5x2wbkISrRw/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const sendText = document.getElementById('sendText')
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response =>{
+                sendText.innerHTML = "Thank's, your data send success !"
+                setTimeout(function(){
+                    sendText.innerHTML = ""
+                }, 3000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+</body>
+</html>

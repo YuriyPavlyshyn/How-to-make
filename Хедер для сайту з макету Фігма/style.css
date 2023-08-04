@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background: url(./img/BG.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 156px;
+    padding-top: 60px;
+    padding-right: 60px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.logo-img {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+nav ul li a {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 25px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    background: linear-gradient(#B80042 0 0) top, linear-gradient(#B80042 0 0) left, linear-gradient(#B80042 0 0) bottom, linear-gradient(#B80042 0 0) right;
+    background-repeat: no-repeat;
+    background-size: 0% 2px, 2px 0%;
+    transition: .5s;
+}
+
+nav ul li a:hover {
+    background-size: 100% 2px, 2px 100%;
+}
+
+.rect-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 650px;
+    height: 250px;
+    background: linear-gradient(180deg, #A3D3CB 41.7%, #A3D3CB 69.36%, rgba(163, 211, 203, 0) 99.98%);
+    border-radius: 25px;
+    z-index: 0;
+}
+
+.rect-2 {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 469px;
+    height: 337px;
+    border-radius: 25px;
+    background-color: white;
+    z-index: 1;
+}
+
+.rect-2 .content {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.rect-2 .content h3 {
+    font-family: 'Arial';
+    font-style: italic;
+    font-size: 22px;
+    line-height: 100%;
+    margin-bottom: 50px;
+}
+
+.rect-2 .content h1 {
+    font-family: 'Arial';
+    font-style: Bold;
+    font-size: 50px;
+    line-height: 100%;
+    color: #B80042;
+}
+
+button {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translateX(-50%);
+    background-color: #D9D9D9;
+    color: black;
+    width: 205px;
+    height: 50px;
+    font-family: 'Arial';
+    font-style: Bold;
+    font-size: 22px;
+    line-height: 100%;
+    cursor: pointer;
+    border: none;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#B80042;
+    z-index: -1;
+    transition: .5s;
+    transform: scaleX(0);
+}
+
+button:hover::before {
+    transform: scaleX(1);
+}
+
+button:hover {
+    color: white;
+}

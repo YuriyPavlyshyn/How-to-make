@@ -1,0 +1,25 @@
+body {
+    background: #222;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pagination a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    transition: .4s;
+}
+
+.pagination a.active {
+    background-color: blue;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: gray; /* тут ми задаємо ховер ефект для усіх кнопок (посилань), окрім такої яка являється активною з класом (.active) */
+}
+
+
+/* !!! Тут потрібно застосувати JavaScript для повноцінної роботи даного елемента !!! */

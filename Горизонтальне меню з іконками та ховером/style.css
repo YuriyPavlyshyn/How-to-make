@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+}
+
+a {
+    width: 20%;
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+}
+
+a:hover {
+    background-color: red;
+}
+
+.main {
+    background-color: gray;
+}
+
+.main:hover {
+    background-color: grey;
+}

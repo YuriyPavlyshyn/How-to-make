@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    /* 4й спосіб (горизонтально) */
+/* body {
+    display: flex;
+    justify-content: center;
+} */
+    /* 5й та 6й способи (горизонтально)
+.container {
+    /* display: flex;
+    justify-content: center; */
+
+    /* display: grid;
+    justify-content: center;
+} */ 
+
+.block {
+    background-color: black;
+    width: 300px;
+    height: 300px;
+    color: white;
+
+    /* Центрування блоку горизонтально */
+
+    /* 1й спосіб
+    margin: 0 auto; */
+
+    /* 2й спосіб
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%); */
+
+    /* 3й спосіб
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); */
+
+    /* Центрування блоку вертикально */
+
+    /* 1й спосіб
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%); */
+
+    /* 2й спосіб
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); */
+}
+
+/* .container { */
+    /* 3й спосіб
+    height: 100vh;
+    display: flex;
+    align-items: center; */
+
+    /* 4й спосіб
+    height: 100vh;
+    display: grid;
+    align-items: center; */
+/* } */
+
+    /* Центрування блоку горизонтально та вертикально одночасно */
+
+.container {
+    height: 100vh;
+    
+    /* 2й спосіб
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    /* 3й спосіб
+    display: grid;
+    justify-content: center;
+    align-items: center; */
+/* 
+    4й спосіб */
+    display: grid;
+    place-items: center;
+}
+
+.block {
+    position: absolute;
+    background-color: black;
+    width: 300px;
+    height: 300px;
+    color: white;
+
+    /* 1й спосіб
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+}
+    

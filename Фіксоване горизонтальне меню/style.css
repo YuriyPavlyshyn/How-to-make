@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    position: fixed; /* фіксуємо навігаційну панель - щоб при скролі вона завжди відображалась */
+    top: 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 25px;
+    font-size: 20px;
+}
+
+.nav a:hover {
+    background-color: grey;
+    color: black;
+}
+
+.main {
+    padding: 20px;
+    margin-top: 30px;
+    text-align: justify;
+}

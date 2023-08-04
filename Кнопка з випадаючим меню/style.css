@@ -1,0 +1,43 @@
+body {
+    background-color: gray;
+    position: absolute; /* позиціонування по центру */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.drop_button {
+    background-color: blue;
+    color: white;
+    padding: 18px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.nav {
+    position: relative;
+    display: inline-block;
+}
+
+.drop_down {
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    display: none;
+}
+
+.drop_down a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    display: block;
+}
+
+.drop_down a:hover {
+    background-color: gray;
+}
+
+.nav:hover .drop_down {
+    display: block;
+}

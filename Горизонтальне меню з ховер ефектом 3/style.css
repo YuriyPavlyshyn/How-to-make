@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar {
+    width: 100%;
+    height: 130px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 800;
+    color: white;
+    background: linear-gradient(var(--d) 0 0) bottom /var(--t, -1px) 2px no-repeat; /* вказуємо var(--d) для того щоб лінія кожного елементу відображалась в окрмому кольорі присвоєному лішкам*/
+    cursor: pointer;
+    transition: 1s;
+}
+
+a:hover {
+    --t: 100%;
+    color: var(--d);
+}
+

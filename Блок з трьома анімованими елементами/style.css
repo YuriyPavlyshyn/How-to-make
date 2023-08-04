@@ -1,0 +1,80 @@
+body {
+    background-color: gray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    text-shadow: 0 0 10px white;
+}
+
+.container {
+    display: flex;
+}
+
+.list {
+    background-color: white;
+    overflow: hidden; /* для того щоб у разі збільшення тексту він не виходив за рамки блоку "list"*/
+    border: 3px solid rgba(0, 0, 255, 50%); /* вказуючи колір через rgba можна встановити відсток прозорості бордеру */
+    margin-left: 15px;
+    padding: 10px;
+    cursor: pointer; 
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+.list h2 {
+    text-align: center;
+}
+
+.list p {
+    text-align: justify;
+}
+
+.list:hover {
+    background: linear-gradient(to top right, rgb(209, 60, 160) 0%, rgb(76, 164, 223) 100%);
+    transform: translateY(-5px); /* зміщення блоку вверх на 5 пікселів при ховері */
+}
+
+.button {
+    background-color: blue;
+    padding: 10px;
+    display: block; /* розтягуємо кнопку по всій ширині блоку */
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+
+}
+
+.list a {
+    text-decoration: none;
+}
+
+.button span {
+    display: inline-block;
+    position: relative; /* для подальшої привязки псевдо-елемента */
+    transition: 0.7s;
+}
+
+.button span::after {
+    content: '\00bb';
+    position: absolute; /* привязка псевдо-елемента до span */
+    opacity: 0; /* робимо елемент прозорим */
+    top: 0;
+    right: -15px;
+    transition: 0.7s;
+}
+
+.button:hover span {
+    padding-right: 20px;
+}
+
+.button:hover span::after {
+    opacity: 1;
+    right: 0;
+}

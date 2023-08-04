@@ -1,0 +1,23 @@
+body {
+    background-color: gray;
+    position: absolute; /* позиціонування по центру */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.load {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(138, 43, 226);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0  rgb(139, 67, 206);
+    animation: animate 1s infinite;
+
+}
+
+@keyframes animate {
+    100% {
+        box-shadow: 0 0 0 35px gray;
+    }
+}

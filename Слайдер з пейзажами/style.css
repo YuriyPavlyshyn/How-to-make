@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #222;
+}
+
+.slide-show {
+    width: 1000px;
+    height: 500px;
+    overflow: hidden; /* на початковому етапі відображаються усі 5 зображень. Для того щоб приховати усі окрім останнього застосовуємо дану властивість */
+    border: 5px solid white;
+}
+
+.mid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* у цьому та наступному селекторі прописуємо властивості для розміщення радіо кнопок по середині знизу картинки */
+.navigation {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    background: transparent;
+}
+
+.nav {
+    width: 17px;
+    height: 17px;
+    border: 1px solid white;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .7s;
+}
+
+/* підвязуємо для ховера значення var(--t), які описані у стилях лейблів */
+.nav:hover { 
+    background: var(--t);
+}
+
+/* не зрозуміло чому, але радіо кнопки відображаються також у верхній лівій частині екрану. Даними властивостями ми їх прибираємо */
+input[name="btn"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+.slide {
+    width: 20%;
+    transition: .7s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+/* тут саме основне: активовуємо радіо кнопки для переключення зображень у режимі слайд - шоу */
+#btn1:checked ~ .slide1 {
+    margin-left: 0;
+}
+
+#btn2:checked ~ .slide2 {
+    margin-left: -20%;
+}
+
+#btn3:checked ~ .slide3 {
+    margin-left: -40%;
+}
+
+#btn4:checked ~ .slide4 {
+    margin-left: -60%;
+}
+
+#btn5:checked ~ .slide5 {
+    margin-left: -80%;
+}
+
+

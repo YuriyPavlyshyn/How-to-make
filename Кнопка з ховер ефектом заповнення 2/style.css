@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    color: white;
+    border: 2px solid lightskyblue;
+    padding: 15px 30px;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0,0,0,.5); /* 0 зміщення по осі x, 3px зміщення по осі y, 5px - зона самого розмиття */
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    background: lightskyblue;
+    width: 250px;
+    height: 200px;
+    border-radius: 50%;
+    z-index: -1;
+    top: 50%; /* змінюємо позицію псевдо-елемента для того щоб він зявлявся з різних сторін */
+    left: 100%; /* змінюємо позицію псевдо-елемента для того щоб він зявлявся з різних сторін */
+    transition: .7s;
+}
+
+.btn:hover::before {
+    top: -50px; /* змінюємо позицію псевдо-елемента для того щоб він зявлявся з різних сторін */
+    left: -43px; /* змінюємо позицію псевдо-елемента для того щоб він зявлявся з різних сторін */
+}

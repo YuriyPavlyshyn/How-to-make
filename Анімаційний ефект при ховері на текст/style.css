@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(56, 51, 51);
+}
+        /* Перший список */
+
+.container {
+    display: flex; /* робимо контейнер флексом */
+    flex-direction: column; /* флекс у вигялді колонки */
+    justify-content: center; /* вирівнювання горизонтально по середині */
+    align-items: center; /* вирівнювання горизонтально по середині */
+    /* margin: 0;
+    padding: 0; */
+}
+
+div {
+    display: inline-block;
+    font-size: 40px;
+    font-family: Georgia;
+    cursor: pointer; /* при наведенні робимо поінтер (ручку) */
+    color: wheat;
+    margin: 25px;
+    padding-bottom: 5px;
+    text-shadow: 0 0 20px wheat;
+}
+
+.point {
+    background: linear-gradient(rgb(255, 166, 0) 0 0) 0 100% /var(--t, 0) 2px no-repeat; /* (red 0 0) - це фактично ми створюємо червону лінію, 0 100% /var(--t, 0) - це позиція бекграунда (по вертикалі),  2px - це розмір лінії. 0 100% лінія зявляється з лівої на праву сторону */
+    transition: 0.5s;
+}
+
+.point:hover {
+    --t: 100%;
+}
+
+.point-1 {
+    background: linear-gradient(rgb(255, 166, 0) 0 0) 100% 100% /var(--t, 0) 2px no-repeat; /* (red 0 0) - це фактично ми створюємо червону лінію, 100% 100% /var(--t, 0) - це позиція бекграунда (по вертикалі),  2px - це розмір лінії, 100% 100% лінія зявляється з правої на ліву сторону*/
+    transition: 0.5s;
+}
+
+.point-1:hover {
+    --t: 100%;
+}
+
+.point-2 {
+    background: linear-gradient(rgb(255, 166, 0) 0 0) 0 100% /var(--t, 0) 2px no-repeat; /* (red 0 0) - це фактично ми створюємо червону лінію, 0 100% /var(--t, 0) - це позиція бекграунда (по вертикалі),  2px - це розмір лінії. 0 100% лінія зявляється з лівої на праву сторону */
+    transition: 0.5s;
+}
+
+.point-2:hover {
+    --t: 100%;
+}
+
+.point-3 {
+    background: linear-gradient(rgb(255, 166, 0) 0 0) var(--t, 0) 100% /var(--b, 0) 2px no-repeat; /* інша стилізація: зявляється зліва і зліва зникає */
+    transition: 0.5s;
+}
+
+.point-3:hover {
+    --b: 100%;
+    --t: 100%;
+}
+
+.point-4 {
+    background: linear-gradient(rgb(255, 166, 0) 0 0) var(--t, 100%) 100% /var(--b, 0) 2px no-repeat; /* інша стилізація: зявляється зправа і зправа зникає */
+    transition: 0.5s;
+}
+
+.point-4:hover {
+    --b: 100%;
+    --t: 0;
+}
+
+.point-5 {
+    background: linear-gradient(rgb(255, 166, 0) 0 0) bottom /var(--t, 10%) 2px no-repeat; /* інша стилізація: з серединки і розповсюджується по різним сторонам */
+    transition: 0.5s;
+}
+
+.point-5:hover {
+    --t: 80%;
+}
+
+        /* Другий список - навігаційна панель*/
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: bisque;
+    font-family: Georgia;
+    /* Ось тут ми фактично обрали стилізацію 3го варіанту підставивши необхідні властивості - таким самим чином можна обрати будь - який інший варінт для елементів навігаційного меню */
+    background: linear-gradient(rgb(255, 166, 0) 0 0) 0 100% /var(--t, 0) 2px no-repeat; 
+    transition: 0.5s;
+}
+
+nav ul li a:hover {
+    --t: 100%;
+}
+

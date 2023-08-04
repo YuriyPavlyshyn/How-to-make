@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(56, 50, 50);
+}
+
+.text {
+    font-size: 80px;
+    font-weight: 800;
+    font-family: sans-serif;
+    background: linear-gradient(220deg, rgb(192, 204, 86) 0%, rgb(72, 167, 72) 25%, rgb(54, 147, 163) 50%, rgb(216, 105, 179) 75%, rgb(221, 76, 76) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    margin-top: 300px;
+    margin-left: 180px;
+    text-align: center;
+}

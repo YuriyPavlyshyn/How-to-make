@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 950px;
+    height: 550px;
+    overflow: hidden;
+    border: 5px solid white;
+}
+
+/* Додаємо вказані значення властивостям у основному контейнері зображень та смим зображенням щоб вони правильно відцентрувались по основі самих зображень */
+.images {
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}

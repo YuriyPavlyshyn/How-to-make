@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+    display: none; /* ховаємо чекбокс */
+}
+
+/* Розміщуємо інпут зправа */
+label {
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    border: 2px solid gray;
+    border-radius: 50px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content {
+    height: 200vh;
+    padding: 40px;
+    text-align: justify;
+}
+
+.content p {
+    margin-top: 20px;
+}
+
+.fa-sun {
+    color: orange;
+    font-size: 20px;
+    text-shadow: 0 0 20px orange;
+    transform: translateX(25px); /* зміщуємо сонечко вправу сторону */
+    transition: .5s;
+}
+
+.fa-moon {
+    color: white;
+    font-size: 20px;
+    text-shadow: 0 0 20px white;
+    transform: translateX(0px); /* розміщуємо місяць на місце сонця та приховуємо його */
+    transition: .5s;
+    opacity: 0;
+}
+
+/* налаштування режимів для переключення */
+#switch-btn:checked ~ label > .fa-sun {
+    opacity: 0;
+    transform: translateX(0);
+}
+
+#switch-btn:checked ~ label > .fa-moon {
+    opacity: 1;
+    transform: translateX(-25px);
+}
+
+/* задаємо стилі контенту при переключенні інпута */
+#switch-btn:checked ~ .content {
+    background: #000;
+    color: white;
+}

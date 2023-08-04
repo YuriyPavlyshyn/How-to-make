@@ -1,0 +1,73 @@
+z* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(12, 12, 12, 0.7), rgba(194, 74, 74, 0.7)), /* ось тут ми використовуємо прозорість 70 відсотків однак чорного кольору і як наслідок отримуємо чорний фон картинки - затемнення. Можна використати інший колір і затемнення буде саме цього кольору. Значення rgba яке йде першим задає колір верхньої частини зобоаження, наступний rgba присвоєю колір нижній частині зображення */ url(./img/beautiful-nature-3077928_1920.jpg);
+    background-size: cover; 
+    background-position: center;
+}
+
+.login {
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(rgba(12, 12, 12, 0.7), rgba(194, 74, 74, 0.7));
+    padding: 40px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px white;
+}
+
+.login h1 {
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px white;
+}
+
+.login input[type="text"], .login input[type="password"] {
+    display: block;
+    background: none; /* тут ми забираємо будь який бекграунд в інпутів і автоматично у них бекграунд присвоєються із значенням застосованим до загальної логін форми*/
+    border: none; /* знизу ми вказуємо властивості бордеру, для чого тут перебиваємо не зрозуміло */
+    outline: 0; /* це фоактично той самий бордер. Якщо ми не можемо забрати бордер застосовуючи border: none; тоді страхуємось застосовуючи outline: 0; чим точно перебиваємо значення для відсутності бордеру. В низу ми вказуємо властивості бордеру, для чого тут перебиваємо не зрозуміло*/
+    color: white; /* тут ми застосовуємо колір для майбутнього введення даних в інпутах */
+    text-align: center;
+    margin: 20px auto;
+    border: 1px solid saddlebrown;
+    padding: 15px 25px;
+    border-radius: 5px;
+}
+
+/* тут ми задаємо значення для тексту в самомому плейсхолдері */
+input::placeholder {
+    color: rgba(255, 255, 255, 75%);
+  }
+
+/* !!! тут ми при кліку на плейсхолдер ховаємо текст плейсхолдера */
+input:focus::placeholder {
+    color: transparent;
+  }
+
+.login input[type="submit"] {
+    display: block;
+    background: none; /* тут ми забираємо будь який бекграунд в інпутів і автоматично у них бекграунд присвоєються із значенням застосованим до загальної логін форми*/
+    color: white; /* тут ми застосовуємо колір для майбутнього введення даних в інпутах */
+    text-align: center;
+    margin: 20px auto;
+    border: 1px solid saddlebrown;
+    padding: 15px 40px;
+    border-radius: 5px;
+    text-transform: uppercase;
+  }
+
+.login input[type="submit"]:hover {
+    background: linear-gradient(rgba(194, 74, 74, 0.7), rgba(12, 12, 12, 0.7));
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 70%);
+}

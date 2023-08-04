@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(./img/wheat-3506758_1920.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    width: 400px;
+    background: rgba(0,0,0,.6);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.login-form h2 {
+    font-style: 35px;
+    color: wheat;
+    margin-bottom: 30px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    outline: none;
+    border: none;
+}
+
+.login-form button {
+    width: 100%;
+    height: 35px;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .5s;
+    color: gold;
+}
+
+.login-form button:hover {
+    transform: scale(1.1);
+    color: white;
+    background: wheat;
+}
+
+.login-form button i {
+    font-size: 20px;
+}
+
+#sendText {
+    color: green;
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+}

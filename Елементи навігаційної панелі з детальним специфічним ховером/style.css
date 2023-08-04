@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #222;
+}
+
+ul {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+li {
+    display: inline-block;
+    list-style: none;
+    padding: 25px;
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+
+a::before {
+    content: attr(content);
+    position: absolute;
+    overflow: hidden;
+    border-right: 1px solid var(--t); /* var(--t) підключаємо ефект */
+    width: 1%; /* для розміщення бордеру злівої сторони */
+    transition: .5s;
+}
+
+a:hover::before {
+    width: 110%;
+    filter: drop-shadow(0 0 20px white);
+    color: var(--t); /* var(--t) підключаємо ефект */
+}

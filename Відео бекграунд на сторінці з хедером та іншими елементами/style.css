@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* запаковуємо та централізуємо відео під розширення екрану */
+.bg-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* для того щоб відео було ззаді а навігація та логотип над ним, тобто зверху*/
+}
+
+/* запаковуємо та централізуємо відео під розширення екрану */
+@media (min-aspect-ratio: 16/9) {
+    .bg-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* запаковуємо та централізуємо відео під розширення екрану */
+@media (max-aspect-ratio: 16/9) {
+    .bg-video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    padding: 20px 8%;
+}
+
+.logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 50px; /* коли ми використовуємо логотип який по своїй висоті та ширині є великим і відповідно посилання розміщуються по середині, що є не припустимим, потрібно застосувати дану властивість для розташування посилання вище до верху екрану */
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 50px;
+    padding: 0 0 70px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+    line-height: 50px;
+    transition: 1.3s;
+}
+
+nav ul li a:hover {
+    color: aqua;
+}
+
+.content {
+    text-align: center;
+    margin-top: 15%;
+}
+
+.content h1 {
+    font-size: 100px;
+    color: white;
+    background: linear-gradient(rgba(37, 72, 92, 0.7), rgba(93, 117, 226, 0.7));
+    border-radius: 25px;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 15px 100px;
+    color: aqua;
+    border-radius: 25px;
+    font-size: 18px;
+    border: 1px solid aqua;
+    background: transparent;
+    cursor: pointer;
+}

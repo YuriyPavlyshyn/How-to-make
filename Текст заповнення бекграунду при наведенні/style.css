@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to left, blue, grey);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    color: white;
+    font-size: 15em;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.text::before {
+    content: 'CWT'; /* елемент про дублювався */
+    position: absolute; /* розположення псевдо-елементу по відношенню до тексту - псевдо-елемент розміщується взаді тексту у вигляді накладення один на одного */
+    overflow: hidden;
+    background: url(https://cdn.stocksnap.io/img-thumbs/280h/W2CDR89NLY.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    -webkit-text-fill-color: transparent; /* спочатку має йти бекграунд а вже після нього значення властивостей -webkit */
+    -webkit-background-clip: text;
+    width: 0;
+    transition: .5s;
+    /* можна також замість картинки в бекграунді використати будь - який колір застосувавши color замість background. Також можна лінійний градіент застосувати замість зображення */
+}
+
+.text:hover::before {
+    width: 50%;
+}

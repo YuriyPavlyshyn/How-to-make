@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Слайдер з пейзажами</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slide-show mid">
+
+        <div class="slides">
+
+            <input type="radio" name="btn" id="btn1" checked>
+            <input type="radio" name="btn" id="btn2">
+            <input type="radio" name="btn" id="btn3">
+            <input type="radio" name="btn" id="btn4">
+            <input type="radio" name="btn" id="btn5">
+
+            <!-- тут розміщуємо 5 зображень з папки img -->
+            <div class="slide slide1">
+                <img src="./img/image-1.jpg">
+            </div>
+            <div class="slide slide2">
+                <img src="./img/image-2.jpg">
+            </div>
+            <div class="slide slide3">
+                <img src="./img/image-3.jpg">
+            </div>
+            <div class="slide slide4">
+                <img src="./img/image-4.jpg">
+            </div>
+            <div class="slide slide5">
+                <img src="./img/image-5.jpg">
+            </div>
+        </div>
+
+        <!-- id з інпутів привязуємо до лейблів -->
+        <div class="navigation">
+            <label for="btn1" class="nav" style="--t:#f1c40f"></label>
+            <label for="btn2" class="nav" style="--t:#e67e22"></label>
+            <label for="btn3" class="nav" style="--t:#e74c3c"></label>
+            <label for="btn4" class="nav" style="--t:#3498db"></label>
+            <label for="btn5" class="nav" style="--t:#8e44ad"></label>
+
+        </div>
+    </div>
+</body>
+</html>

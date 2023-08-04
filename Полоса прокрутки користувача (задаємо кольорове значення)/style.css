@@ -1,0 +1,19 @@
+body {
+    background: #000;
+}
+
+/* робимо велику висоту щоб зявилась прокрутка */
+section {
+    width: 100%;
+    height: 300vh;
+}
+
+/* стилізуємо полосу прокрутки */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(blue, aqua, red, green, yellow);
+    border-radius: 5px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню випадаюче</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">LOGO</a>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Technologies &bigtriangledown;</a> <!-- додаємо до посиалання стрілочку для того щоб було видно що вона містить у собі підсписки. Стрілочка вставляється разом із &. Стрілочки можна знайти за наступним джерелом: https://html.spec.whatwg.org/ -->
+                    <ul> <!-- додаємо підсписки -->
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">JavaScript &bigtriangledown;</a>
+                            <ul> <!-- додаємо підсписки -->
+                                <li><a href="#">JQuery</a></li>
+                                <li><a href="#">NodeJS</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Design &bigtriangledown;</a>
+                    <ul> <!-- додаємо підсписки -->
+                        <li><a href="#">UI Design</a></li>
+                        <li><a href="#">UX Design</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

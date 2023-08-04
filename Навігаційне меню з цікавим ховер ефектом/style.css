@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(60deg, blue, aqua);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 2px 2px 10px black;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 15px 20px;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+    z-index: 0;
+    transition: .5s;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0; /* для перекриття тексту */
+    border-radius: 8px;
+    background-color: blue;
+    transform: rotate(450deg) scale(0);
+    transition: .5s;
+}
+
+nav ul li a:hover::before {
+    transform: rotate(0deg) scale(1);
+}
+

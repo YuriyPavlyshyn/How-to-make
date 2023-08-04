@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/dolphins-performing-during-a-dolphin-show-with-their-trainers-in-the-national-zoo.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 15px 12%;
+}
+
+.logo-img {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: aqua;
+    font-size: large;
+    position: relative; /* робимо псевдоелемент привязаний до посилань */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: .5s;
+}
+
+/* відображаємо псевдо-елемент при наведенні на посилання */
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.content {
+    max-width: 600px;
+    color: burlywood;
+    margin-top: 30%;
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 50px;
+    margin: 20px 0;
+    letter-spacing: 2px;
+}
+
+p {
+    font-style: 15px;
+    line-height: 22px;
+    color: white;
+}
+
+span {
+    color: aqua;
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+button {
+    padding: 20px 40px;
+    color: aqua;
+    background-color: burlywood;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: .5s;
+}
+
+button:hover {
+    background-color: aqua;
+    color: burlywood;
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+/* тут ми створюємо та стилізуємо ліве вертикальне меню*/
+
+.sidenav {
+    height: 100vh;
+    width: 50px;
+    background: linear-gradient(rgba(222, 184, 135, 65%),rgba(78, 194, 214, 65%));
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* !!! ось тут ми розміщуємо іконки соціальних мереж по вертикалі */
+.social-links {
+    width: 50px;
+    position: absolute;
+    top: 30%;
+    display: flex;
+    flex-direction: column; /* безпосередньо розставляє елементи по вертикалі */
+    align-items: center;
+    
+}
+
+.social-links i {
+    font-size: 25px; /* величина іконок міняється за допомогою цієї властивості */
+    margin-top: 55px;
+    margin-bottom: 55px;
+    cursor: pointer;
+    transition: .7s;
+}
+
+.social-links i:hover {
+    transform: rotate(360deg);
+    color: white;
+}
+
+
+
+

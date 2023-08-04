@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Слайдер (автоматичне переключення зображень)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="images">
+            <img src="./img/image-1.jpg">
+            <img src="./img/image-2.jpg">
+            <img src="./img/image-3.jpg">
+            <img src="./img/image-4.jpg">
+            <img src="./img/image-5.jpg">
+            <img src="./img/image-6.jpg">
+            <img src="./img/image-7.jpg">
+        </div>
+    </div>
+
+    <!-- Основа - задаємо функцію автоматичного переключення зображень -->
+    <script>
+        var indexValue = 0;
+        function SlideShow() {
+            setTimeout(SlideShow, 2000);
+            var x;
+            const img = document.querySelectorAll ("img");
+            for(x = 0; x < img.length; x++) {
+                img[x].style.display = "none";
+            }
+            indexValue++;
+            if(indexValue > img.lenght){indeValue = 1}
+            img[indexValue -1].style.display = "block";
+        }
+        SlideShow();
+    </script>
+</body>
+</html>

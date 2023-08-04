@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: lightskyblue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div {
+    margin-bottom: 30px;
+}
+
+/* створюємо стрілочки за допомогою значень для бордерів */
+.arrow {
+    display: inline-block;
+    border: 2px solid white;
+    padding: 3px;
+    border-width: 0 3px 3px 0;
+}
+
+/* перевертаємо створені бордери у потрібні напрямки */
+.right {
+    transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+}
+
+.up {
+    transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+}
+
+/* створення кнопки з стрілочкою вверх */
+.arrow-up {
+    width: 50px;
+    height: 50px;
+    background: #000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.arrow-up:hover {
+    background: #fff;
+}
+
+.arrow-up:hover .arrow {
+    display: inline-block;
+    border: 2px solid #000;
+    padding: 3px;
+    border-width: 0 3px 3px 0;
+}
+
+/* створення навігаційного меню, одне посилання в якому буде разом із стрілочкою */
+nav {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 0 25px;
+    color: #000;
+}
+
+nav .arrow {
+    display: inline-block;
+    border: 2px solid #000;
+    padding: 3px;
+    border-width: 0 3px 3px 0;
+}
+
+.down {
+    margin-left: 5px;
+}

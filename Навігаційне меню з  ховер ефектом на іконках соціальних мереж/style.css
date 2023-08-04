@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,.5)), url(./img/sunset-7762468_1920.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 40px 8%;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    line-height: 100px;
+    margin: 10px;
+}
+
+nav ul li a {
+    font-size: 20px;
+    color: orange;
+    padding: 10px;
+    background: linear-gradient(currentColor 0 0) 0 0, linear-gradient(currentColor 0 0) 0 0, linear-gradient(currentColor 0 0) 100% 100%, linear-gradient(currentColor 0 0) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 15px 2px, 2px 15px;
+    transition: .5s;
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+nav ul li a:hover {
+    background-position: 100% 0%, 0% 100%, 0% 100%, 100% 0%;
+    color: lightcoral;
+}
+
+nav .logo {
+    width: 100px;
+    height: 100px;
+    transition: .5s;
+}
+
+nav .logo:hover {
+    transform: scale(1.2);
+}
+
+.btn {
+    display: block;
+    width: 200px;
+    height: 30px;
+    color: orange;
+    border: 1px solid lightcoral;
+    padding: 0 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    background: transparent;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border: 1px solid orange;
+    color: lightcoral;
+}
+
+.content {
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 45px;
+    color: wheat;
+    margin-bottom: 20px;
+}
+
+.content h1 span {
+    color: lightcoral;
+}
+
+.content p {
+    font-size: 20px;
+    color: wheat;
+    margin-bottom: 20px;
+    text-align: justify;
+    line-height: 24px;
+}
+
+.content .btn-2 {
+    width: 50%;
+    padding: 15px 0;
+    border: 2px solid lightcoral;
+    color: orange;
+    border-radius: 5px;
+    background: transparent;
+    transition: .5s;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.content .btn-2:hover {
+    transform: scale(1.1);
+}
+
+.social-links {
+    position: absolute;
+    height: 280px;
+    width: 60px;
+    background: orange;
+    border-radius: 10px;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+}
+
+.social-links .icons {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px auto;
+    transition: .5s;
+}
+
+.social-links .icon-text {
+    min-width: 0px;
+    width: 100%;
+    background: lightcoral;
+    margin-right: 5px;
+    line-height: 0;
+    color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px 0 0 5px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.social-links .icons .icon {
+    min-width: 50px;
+    height: 100%;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.icons:hover .icon {
+    background: wheat;
+}
+
+.icons:hover .icon-text {
+    min-width: 100px;
+}
+

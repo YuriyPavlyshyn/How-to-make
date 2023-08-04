@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(125deg, pink, lightblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 700px;
+    margin: 5px;
+    box-shadow: 0 5px 10px black;
+}
+
+summary {
+    padding: 15px;
+    background: rgb(165, 132, 196);
+    color: white;
+    list-style: none;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1px solid #333;
+    position: relative;
+}
+
+p {
+    font-size: 15px;
+    padding: 10px;
+    background: white;
+}
+
+/* додаємо плюсик */
+summary::after {
+    position: absolute;
+    content: '+';
+    top: 12px;
+    right: 20px;
+    font-size: 25px;
+    font-weight: 900;
+    transition: .3s;
+}
+
+/* перевертаємо плюсик */
+details[open] summary::after {
+    transform: rotate(135deg);
+}
+
+details[open] summary {
+    background: #130f40;
+}

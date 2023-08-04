@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to right, #bdc3c7, #2c3e50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating-box {
+    position: relative;
+    background: white;
+    width: 250px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.star-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.star-box i {
+    font-size: 18px;
+}
+
+.star-box .checked {
+    color: orange;
+}
+
+.star-box .half {
+    color: orange;
+}

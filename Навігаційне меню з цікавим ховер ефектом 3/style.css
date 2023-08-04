@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(60deg, red, orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px black;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    background-image: linear-gradient(red 0 0), linear-gradient(blue 0 0);
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    background-position: bottom left, bottom 6px right 0;
+    transition: .5s;
+} 
+
+/* чомусь не працює */
+nav ul li a:hover {
+    background-size: 100% 2px;
+    background-position: 0% calc(100% -3px), 100% calc(100% -3px);
+    transition: .5s, background-position .5s .5s;
+}

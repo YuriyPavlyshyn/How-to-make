@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+}
+
+.person {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.person:hover {
+    flex: 3; /* для зміщення зображень при наведенні */
+}
+
+.person-img {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: grayscale(90%); /* для відображення зображень в чорно-білому кольорі */
+    transition: .5s;
+}
+
+.person:hover, .person-img:hover {
+    filter: grayscale(0);
+}
+
+.info {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+    transition: .4s;
+    opacity: 0;
+}
+
+.person:hover .info {
+    opacity: 1;
+    bottom: 70px;
+    transition-delay: .5s;
+}
+
+.info h2 {
+    font-size: 20px;
+}
+
+.info p {
+    font-size: 25px;
+    margin: 8px;
+    color: aqua;
+    font-weight: 900;
+}
+
+.social-icons a {
+    display: inline-block;
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    background-color: aqua;
+    line-height: 37px;
+    color: black;
+    margin: 0 6px;
+    transition: .5s;
+}
+
+.social-icons a:hover {
+    border-radius: 50%;
+    color: red;
+}

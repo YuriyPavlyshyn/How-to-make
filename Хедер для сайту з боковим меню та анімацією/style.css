@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(./img/space.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.logo {
+    width: 110px;
+    height: 80px;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 15px;
+}
+
+button {
+    border: 1px solid rgb(67, 145, 168);
+    outline: none;
+    padding: 10px 30px;
+    background-color: transparent;
+    color: blueviolet;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    border: 1px solid blueviolet;
+    color: rgb(67, 145, 168);
+}
+
+.content {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-30%);
+}
+
+/* тут ми задаємо задній фон заголовку за рахунок підтягнутого зображення */
+h1 {
+    font-size: 80px;
+    margin: 10px 0 30px;
+    background: url(./img/background-text.jpg) center no-repeat;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+h3 {
+    color: blueviolet;
+    font-weight: 300;
+}
+
+.side-nav {
+    width: 50px;
+    height: 100vh;
+    background: linear-gradient(rgba(12, 12, 12, 60%), rgba(255, 255, 255, 30%));
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.menu {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 40px auto 0;
+    cursor: pointer;
+}
+
+.social-links img, .info-links img {
+    margin: 5px auto;
+    cursor: pointer;
+    transition: .7s;
+}
+
+.social-links {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.info-links {
+    text-align: center;
+    position: absolute;
+    top: 80%;
+    transform: translate(0%);
+}
+
+.social-links img:hover, .info-links img:hover {
+    transform: scale(1.3);
+}
+
+.meteors img {
+    width: 30px;
+    height: 30px;
+    animation: move 8s linear infinite;
+}
+
+.meteors {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: -70px;
+}
+
+@keyframes move { 
+    0% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(200vh);
+        opacity: 0;
+    }
+}
+
+.meteors img:nth-child(1) { /* звертаємось до кожного елемента окремо */
+    animation-delay: 2s; /* застосовуємо для кожного елемента окрема затримку */
+}
+
+.meteors img:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.meteors img:nth-child(3) {
+    animation-delay: 3.5s;
+}
+
+.meteors img:nth-child(4) {
+    animation-delay: 2.5s;
+}
+
+.meteors img:nth-child(5) {
+    animation-delay: 3s;
+}
+
+.meteors img:nth-child(6) {
+    animation-delay: 6s;
+}
+
+.meteors img:nth-child(7) {
+    animation-delay: 4.5s;
+}
+
+.meteors img:nth-child(8) {
+    animation-delay: 4s;
+}
+
+.meteors img:nth-child(9) {
+    animation-delay: 5s;
+}
+
+.meteors img:nth-child(10) {
+    animation-delay: 1.5s;
+}
+
+

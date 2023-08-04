@@ -1,0 +1,38 @@
+body {
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    width: 700px;
+    background: gray;
+}
+
+.skills {
+    text-align: right;
+    padding: 10px 5px; /* тут фактично створюємо полоси */
+    color: black;
+}
+
+h1, p {
+    color: white;
+    text-shadow: 0 0 10px white;
+}
+
+.html {
+    background-color: green;
+    width: 90%; /* задаємо на скільки у відсотках буде заповнена кольором полоса */
+}
+
+.css {
+    background-color: yellow;
+    width: 50%; /* задаємо на скільки у відсотках буде заповнена кольором полоса */
+}
+
+.js {
+    background-color: red;
+    width: 10%; /* задаємо на скільки у відсотках буде заповнена кольором полоса */
+}

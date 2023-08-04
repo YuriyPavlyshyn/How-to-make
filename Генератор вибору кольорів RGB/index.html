@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор вибору кольорів RGB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- створення макету генератора -->
+    <div class="container">
+        <div class="box">
+            R <input type="range" name="red" id="red" value="255" min="0" max="255">
+        </div>
+        <div class="box">
+            G <input type="range" name="green" id="green" value="255" min="0" max="255">
+        </div>
+        <div class="box">
+            B <input type="range" name="blue" id="blue" value="255" min="0" max="255">
+        </div>
+        <input type="text" id="result" value="rgb(0,0,0)">
+    </div>
+
+    <!-- створення функціональності для генератора щодо безпосереднього відображення кольорів при зміні повзунків та відображення зміни значень різних кольорів в RGB форматі у цифрових відмітках -->
+    <script>
+        function colors() {
+            const red = document.getElementById('red').value;
+            const green = document.getElementById('green').value;
+            const blue = document.getElementById('blue').value;
+            const colors = 'rgb('+ red +', '+ green +', '+ blue +')';
+            document.body.style.backgroundColor = colors;
+            document.getElementById('result').value = colors;
+        }
+
+        document.getElementById('red').addEventListener('input', colors);
+        document.getElementById('green').addEventListener('input', colors);
+        document.getElementById('blue').addEventListener('input', colors);
+    </script>
+</body>
+</html>

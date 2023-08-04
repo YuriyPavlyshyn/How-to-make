@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 40px;
+    margin: 0 20px;
+    transition: .6s;
+}
+
+.social-icons a::before, .social-icons a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: .5s;
+}
+
+.social-icons a:hover {
+    color: white;
+    transform: scale(.7);
+}
+
+/* Тут ми задаємо наклон правого та лівого бордера */
+.social-icons a:hover::before {
+    border-right: 3px solid red;
+    border-left: 3px solid blue;
+    transform: skewX(20deg); /* зміщуємо бокові бордери на 20 градусів */
+}
+
+/* Тут ми задаємо наклон верхнього та нижнього бордера */
+.social-icons a:hover::after {
+    border-top: 3px solid rgb(30, 158, 41);
+    border-bottom: 3px solid rgb(238, 235, 49);
+    transform: skewY(-20deg); /* зміщуємо бордери на 20 градусів */
+}

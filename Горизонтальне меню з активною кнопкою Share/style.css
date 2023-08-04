@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./img/lvov-shevchenkiv-gay.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo {
+    color: green;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+li {
+    display: inline-block;
+    padding: 20px;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: .3s;
+}
+
+a:hover {
+    color: green;
+}
+.share {
+    position: relative;
+    background: linear-gradient(45deg, green, grey);
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    transition: .5s;
+    padding: 8px 30px;
+    overflow: hidden;
+}
+
+.social-btn {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    transform: translateY(100%);
+}
+
+.social-btn a {
+    color: white;
+    transition: .3s;
+}
+
+.share:hover {
+    border-radius: 15px;
+}
+
+.text, .fa-solid {
+    display: inline-block;
+    transition: .3s;
+}
+
+.share:hover .text,
+.share:hover .fa-solid,
+.share:hover .social-btn a {
+    transform: translateY(-30px);
+}

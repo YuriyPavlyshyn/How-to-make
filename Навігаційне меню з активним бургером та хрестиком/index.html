@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Навігаційне меню з активним бургером та переходом на вертикальне меню з хрестиком для його закриття</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Blog</a>
+        <a href="#">Contacts</a>
+        <a href="#"><span onclick="openNav()">&#9776;</span></a> <!-- додаємо сутність бургера та задаємо значення про можливість кліку для подальшого використання скрипту -->
+    </div>
+    <div id="nav" class="overlay">
+        <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+            <a href="#">Blog</a>
+            <a href="#">Contacts</a>
+        </div>
+    </div>
+    <script>
+    /* функція для відкриття меню */
+        function openNav() {
+            document.getElementById('nav').style.height = "100%";
+        }
+        
+    /* функція для закриття меню через кнопку "Х" */
+        function closeNav() {
+            document.getElementById('nav').style.height = "0%";
+        }
+    </script>
+
+    <!-- Крім цього можна зробити щоб меню відкривалось знизу, зліва та справа. Деталі у цьому відео: https://www.youtube.com/watch?v=GdasztnnorM&list=PLIEunNjc9Uyt-wFImpReJ1RNSqDq_gti0&index=134 (13 хвилина) -->
+</body>
+</html>

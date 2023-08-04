@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(59, 52, 52);
+}
+
+.skills {
+    width: 100%;
+    width: 700px;
+    padding: 0 20px;
+}
+
+p {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 15px 0;
+}
+
+.skill-bar {
+    height: 12px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.skill-percentage {
+    height: 12px;
+    background-color: blue;
+    border-radius: 4px;
+    position: relative;
+}
+
+/* тут ми розміщуємо квадратики з інформацію про відсотки навиків */
+.skill-percentage::before {
+    content: attr(a);
+    position: absolute;
+    background-color: gray;
+    padding: 4px 6px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    top: -30px;
+    right: 0;
+    transform: translateX(50%);
+}
+
+/* тут ми створюємо маленьку стрілочку під квадратиками з відсотками */
+.skill-percentage::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: gray;
+    top: -13px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+}

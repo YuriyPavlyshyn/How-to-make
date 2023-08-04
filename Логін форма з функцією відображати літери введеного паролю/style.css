@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./img/mountains-7302806_1920.jpg); /* додаємо затемнення фоновому зображенню */
+    background-position: center;
+    background-size: cover;
+}
+
+.login {
+    width: 300px;
+    height: 400px;
+    background: rgba(34, 34, 34, 35%);
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    padding: 130px 30px;
+}
+
+.user {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    top: -20px;
+    left: 25%;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 30px;
+    color: black;
+}
+
+.login input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login input[type="text"], .login input[type="password"] {
+    border: none;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
+    color: grey;
+    height: 50px;
+}
+
+.login input[type="text"]:focus::placeholder {
+    color: transparent;
+}
+.login input[type="password"]:focus::placeholder {
+    color: transparent;
+}
+
+.login input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.login input[type="submit"]:hover {
+    color: white;
+    background-color: grey;
+    font-size: 15px;
+}
+
+/* розміщуємо "eye" іконку в інпуті пароля */
+.pass-icon {
+    position: absolute;
+    right: 25px;
+    top: 71%;
+    cursor: pointer;
+}
+
+

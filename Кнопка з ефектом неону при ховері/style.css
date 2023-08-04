@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #222;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    padding: 2rem 5rem;
+    background: transparent;
+    font-style: 1.7rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    border: .1rem solid grey;
+    border-radius: 1rem;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+
+/* задаємо ефект багато шарової тіні */
+button:hover {
+    color: white;
+    background: aqua;
+    border: 1px solid aqua;
+    text-shadow: 0 0 .5rem white, 0 0 1rem white, 0 0 2rem white;
+    box-shadow: 0 0 .5rem aqua, 0 0 1rem aqua, 0 0 2rem aqua, 0 0 5rem aqua, 0 0 10rem aqua;
+}

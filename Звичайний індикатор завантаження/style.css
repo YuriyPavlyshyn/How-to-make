@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.load {
+    font-weight: 800;
+    font-size: 40px;
+    font-family: sans-serif;
+    color: white;
+    text-shadow: 0 0 25px white; /* 0 0 25px  - "0", "0" - це зміщення по вертикалі та по горизонталі*/
+    background: linear-gradient(white 0 0) bottom left /0% 3px no-repeat;
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+    to {
+        background-size: 100% 3px;
+    }
+}

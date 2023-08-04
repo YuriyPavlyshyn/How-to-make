@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/1439651970_2.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.me {
+    min-width: 440px;
+    text-align: center;
+    padding: 35px 50px;
+    background-color: rgba(0, 255, 255, 30%);
+    border-radius: 20px;
+    width: 90%;
+}
+
+.me img {
+    border-radius: 50%;
+    background-color:aqua;
+    padding: 3px;
+    margin-bottom: 20px;
+}
+
+.me h2 {
+    color: transparent; /* Встановлюємо прозорість */
+    background-image: url(https://media.giphy.com/media/dB66K4Kywc8gPVh6A7/giphy-downsized-large.gif); /* Виккористовуємо обрану анімацію */
+    -webkit-background-clip: text;
+    font-size: 40px;
+    
+}
+
+.me p {
+    margin-bottom: 30px;
+}
+
+.social-icons {
+    font-size: 25px;
+    color: bisque;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.social-icons i {
+    margin: 0 10px;
+    transition: 0.5s;
+    color: black;
+}
+
+.social-icons i:hover {
+   transform: scale(1.5);
+}
+
+.btn {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: 3px solid aqua;
+    color: transparent; 
+    background-image: url(https://media.giphy.com/media/dB66K4Kywc8gPVh6A7/giphy-downsized-large.gif); /* Виккористовуємо обрану анімацію */
+    -webkit-background-clip: text;
+}
+
+.btn:hover {
+    background-color: rgba(95, 158, 160, 30%);
+    color: white;
+}
+
+.btn-1 i {
+    margin-right: 60px;
+}
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Логін Форма з попередженням про помилкове включення введення даних великм регістром (можна використовувати для повідомлення про необхідність використання того чи іншого регістру а також валідації полей з введенням певної кількості сиволів)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-form">
+        <h2>Login</h2>
+        <input type="text" id="myName" placeholder="Enter your name ...">
+        <input type="password" id="myPassword" placeholder="Enter your password ...">
+        <div class="text"></div> <!-- для підєднання до скрипту -->
+        <input type="submit" value="Submit">
+    </div>
+
+    <script>
+        /* для поля паролю */
+        const password = document.querySelector('#myPassword');
+        const text = document.querySelector('.text');
+        password.addEventListener('keyup', function(event) {
+            if (event.getModifierState('CapsLock')) {
+                text.textContent = 'Warning! Caps Lock is ON !';
+            } else {
+                text.textContent = '';
+            }
+        });
+
+        /* для поля з іменем */
+        const name = document.querySelector('#myName');
+        const text1 = document.querySelector('.text');
+        name.addEventListener('keyup', function(event) {
+            if (event.getModifierState('CapsLock')) {
+                text.textContent = 'Warning! Caps Lock is ON !';
+            } else {
+                text.textContent = '';
+            }
+        });
+    </script>
+</body>
+</html>

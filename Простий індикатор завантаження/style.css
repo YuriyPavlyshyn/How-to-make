@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+    position: absolute; /* центруємо обєкт по центру */
+    left: 50%; /* центруємо обєкт по центру */
+    top: 50%; /* центруємо обєкт по центру */
+    transform: translate(-50%, -50%); /* центруємо обєкт по центру */
+}
+
+.load {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* робимо елемент круглим */
+    border: 5px solid wheat; /* створюємо брдер */
+    border-left-color: blueviolet; /* створюємо колір для лівої частини бордеру */
+    box-shadow: 0 0 30px wheat; /* 20 пікселів - це розмитість для гарного ефекту */
+    animation: animate 2s linear infinite; /* animate - це назва анімації, linear - ріномірно, infinite - безкінечно */
+}
+
+@keyframes animate {
+    to {
+        transform: rotate(360deg);
+    }
+}

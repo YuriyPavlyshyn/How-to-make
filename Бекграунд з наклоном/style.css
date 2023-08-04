@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #262626;
+}
+
+.header {
+    width: 100%;
+    height: 600px;
+    background: url(./img/animals-2675484_1920.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    /* ось тут безпосередньо ми задаємо наклон з лівої на праву сторону */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+    /* якщо ми хочемо зробити наклон з правої на ліву сторону - clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%); */
+}
+
+.header h1 {
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    letter-spacing: 20px;
+    margin-top: 80px;
+}
+
+.header h2 {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+.header h4 {
+    text-align: center;
+    color: wheat;
+    margin-top: 10px;
+}
+
+p {
+    padding: 10px 30px;
+    color: white;
+    text-align: justify;
+}

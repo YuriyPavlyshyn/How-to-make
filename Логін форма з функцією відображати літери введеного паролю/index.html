@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Логін форма з функцією відображати літери введеного паролю</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <img src="./img/101.png" alt="USer Icon" class="user">
+            <h1>LOGIN</h1>
+    <form action="#">
+        <label for="username">User name</label>
+        <input type="text" id="username" placeholder="Enter your name">
+        <br>
+        <label for="form-pass">Password</label>
+        <input type="password" id="form-pass" class="form-pass"  placeholder="Enter your password">
+        <span class="pass-icon" id="pass-icon"><img src="./img/eye.png" style="width: 50px; height: 50px;"></span>
+        <br>
+        <input type="submit" value="Login">
+    </form>        
+        </div>
+    </div>
+    <!-- Застосовуємо джава скріпт для того щоб при натисканні на "eye" іконку відображався введений пароль -->
+    <script>
+        /* в цьому випадку існують тільки дві форми 'form-pass' та 'pass-icon' */
+        const inputPass = document.getElementById('form-pass');
+        const iconPass = document.getElementById('pass-icon');
+
+        /* задаємо варіант реалізації за формою натискання (кліку) на iconPass, він же 'pass-icon' */
+        iconPass.addEventListener('click', () => {
+            /* якщо введений пароль - при кліку отримуємо читабельний текст, тобто введений пароль */
+            if (inputPass.getAttribute('type') ==="password") {
+                inputPass.setAttribute('type', 'text');
+                /* і навпаки: якщо введений текст - при кліку отримуємо приховані значення паролю у вигляді стандартних кружечків */
+            } else {
+                inputPass.setAttribute('type', 'password')
+            }
+        })
+    </script>
+
+</body>
+</html>

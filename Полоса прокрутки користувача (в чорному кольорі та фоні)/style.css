@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* чорний стиль */
+body {
+    width: 100%;
+    height: 300vh; /* для того щоб збільшити висоту і щоб зявилась полоса прокрутки користувача */
+    background-color: #262626;
+}
+
+::-webkit-scrollbar { /* задаємо розмір контейнера прокрутки */
+    width: 30px;
+}
+
+::-webkit-scrollbar-track { /* стилізуємо контейнер прокрутки */
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px #0c0c0c inset, -5px -5px 10px #4c4c4c inset; /* inset - для того щоб тінь навпаки падала в середину скролбару а не виходила за її межі */
+}
+
+::-webkit-scrollbar-thumb { /* стилізуємо сам елемент прокрутки */
+    border-radius: 50px;
+    box-shadow: -5px -5px 5px #0c0c0c inset, 5px 5px 5px #4c4c4c inset;
+}
+
+
+
+
+/* Те саме тільки в білому стилі */
+body {
+    width: 100%;
+    height: 300vh; /* для того щоб збільшити висоту і щоб зявилась полоса прокрутки користувача */
+    background-color: #e6e6e6;
+}
+
+::-webkit-scrollbar { /* задаємо розмір контейнера прокрутки */
+    width: 30px;
+}
+
+::-webkit-scrollbar-track { /* стилізуємо контейнер прокрутки */
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px #ccc inset, -5px -5px 10px #fff inset; /* inset - для того щоб тінь навпаки падала в середину скролбару а не виходила за її межі */
+}
+
+::-webkit-scrollbar-thumb { /* стилізуємо сам елемент прокрутки */
+    border-radius: 50px;
+    box-shadow: -5px -5px 5px #ccc inset, 5px 5px 5px #fff inset;
+}

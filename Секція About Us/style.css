@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #222;
+}
+
+.about-section {
+    background: url(./img/image.jpg) left no-repeat;
+    background-size: 55%; /* ширина бекграунда */
+    overflow: hidden;
+    padding: 100px 0; /* цим вертикально розширюємо бекграунд */
+}
+
+.container {
+    width: 60%;
+    float: right;
+    background: white;
+    padding: 85px;
+}
+
+.container > h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.container > p {
+    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: justify;
+}
+
+.expirience {
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+hr { /* даний елемент також можна стилізувати */
+    margin-top: 30px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    /* задаючи автоматичні марджини з обох сторін обєкт розташовується по середині */
+    height: 2px;
+    background-color: black;
+    border: none;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons img {
+    margin: 25px;
+    cursor: pointer;
+}

@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/swan-7167802_1920.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* відступи для навігаційної панелі можна задати цим значенням властивості або ...
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 2%;
+     */
+    
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 30px;
+    cursor: pointer;
+    transition: .7s;
+}
+
+a {
+    font-size: 18px;
+    text-decoration: none;
+    color: rgba(0, 255, 255, 70%);
+    transition: .7s;
+}
+
+/* додаємо тінь при ховері */
+a:hover {
+    filter: drop-shadow(0 0 5px white)  drop-shadow(0 0 10px white);
+}
+
+h1 {
+    position: absolute;
+    color: #333;
+    font-size: 100px;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Супер анімація для заголовку */
+h1::before {
+    content: attr(content);
+    position: absolute;
+    width: 60px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid white;
+    color: white; rgba(0, 255, 255, 70%);
+    animation: move 7s linear infinite;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 70%))  drop-shadow(0 0 20px rgba(0, 255, 255, 70%));
+}
+
+@keyframes move {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.btn {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    padding: 10px 20px;
+    border: 2px solid rgba(0, 255, 255, 70%);
+    border-radius: 10px;
+    background: transparent;
+    color: white;
+    font-size: 18px;
+    transition: .7s;
+}
+
+/* туманність при ховері */
+.btn:hover {
+    filter: drop-shadow(0 0 5px white)  drop-shadow(0 0 10px white);
+}

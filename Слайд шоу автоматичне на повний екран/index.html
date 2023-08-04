@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>!!! Слайд шоу автоматичне на повний екран</title>
+</head>
+<body>
+    <script>
+        let randomBgImage = Math.floor((Math.randon()*10));
+/* *10 - це кількість зображень, які будуть опрацьовуватися JavaScript */
+        document.body.style.backgroundImage = "url(img/"+randomBgImage+".jpg)";
+/* тут вказуємо формат зображення - .jpg */
+        document.body.style.width = "100vw";
+        document.body.style.height = "100vh";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.overflow = "hidden";
+        document.body.style.webkitTransition = "0.5s";
+
+        setInterval(function(){
+            animate();
+        }, 2000); /* час зміни зображень */
+
+        function animate() {
+            let randomBgImage = Math.floor((Math.randon()*10));
+        document.body.style.backgroundImage = "url(img/"+randomBgImage+".jpg)";
+        document.body.style.width = "100vw";
+        document.body.style.height = "100vh";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.overflow = "hidden";
+        }
+    </script>
+</body>
+</html>

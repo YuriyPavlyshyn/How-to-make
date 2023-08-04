@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Текст - копіювання введеного тексту з поля введення</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/383912c291.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="text" autocomplete="off" placeholder="Enter your message ...">
+        <!-- Властивостями та значеннями до них - onclick="copy('text')дозволяємо копіювати контент з поля введення -->
+        <button onclick="copy('text')">Copy text <i class="fa-sharp fa-regular fa-copy"></i></button>
+    </div>
+
+    <!-- Додаємо скрипт для задання функції з копіювання контенту. При натисканні на кнопку "копіювати" текст в полі введення виділяється --> 
+    <script>
+        let copy = (copyText) => {
+            document.getElementById(copyText).select();
+
+    /* безпосереднє копіювання тексту з поля введення */
+            document.execCommand('copy');
+        }
+    </script>
+</body>
+</html>

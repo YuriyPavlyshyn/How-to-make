@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #222;
+}
+
+.container {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1 {
+    font-size: 45px;
+    color: #000;
+    margin-bottom: 50px;
+    text-shadow: 0 0 10px #fff;
+}
+
+iframe {
+    width: 80vw; /* ще один вид величин для адаптування елементів при різних розширеннях */
+    height: 60vh; /* ще один вид величин для адаптування елементів при різних розширеннях */
+    filter: invert(100%);
+    border-radius: 25px;
+    box-shadow: 0 0 10px #000;
+}
+

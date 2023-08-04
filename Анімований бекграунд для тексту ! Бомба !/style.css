@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(36, 31, 31);
+    
+}
+
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 150px;
+    margin-top: 300px;
+    color: transparent; /* Встановлюємо прозорість */
+    background-image: url(https://media.giphy.com/media/dB66K4Kywc8gPVh6A7/giphy-downsized-large.gif); /* Виккористовуємо обрану анімацію */
+    -webkit-background-clip: text; /* Основа ! */
+}

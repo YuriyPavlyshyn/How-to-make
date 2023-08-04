@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Тут ми централізуємо бекграунд у вигляді зображення по центру */
+.preview-page {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/o_1ggmu86v1mome6r1blad9a13ng1k.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.preview-menu {
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    color: white;
+    opacity: 0.7;
+    position: absolute;
+    top: 20%; /* відштовхуємо менюшку на 20 відсотків зверху вниз */
+    left: 10%; /* відштовхуємо менюшку на 10 відсотків зліва на право */
+    border-radius: 20px;
+    padding: 40px;
+}
+
+p {
+    text-align: justify;
+}
+
+p span {
+    color: burlywood;
+}
+.title {
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: burlywood;
+}
+
+.preview-menu a {
+    color: chocolate;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    border: 2px solid burlywood;
+    padding: 25px 35px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.btn:hover {
+    background-color: bisque;
+    color: chocolate;
+}

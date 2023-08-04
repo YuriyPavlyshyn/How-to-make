@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #222;
+}
+
+.navigation {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1% 0;
+}
+
+.navigation ul {
+    display: flex;
+}
+
+.navigation ul li {
+    list-style: none;
+    padding: 10px 25px;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.navigation ul li .a-1  {
+    color: red;
+}
+
+.navigation ul li > .a-2 {
+    color: yellow;
+}
+
+.navigation ul li > .a-3 {
+    color: lightgreen;
+}
+
+.navigation ul li > .a-4 {
+    color: lightskyblue;
+}
+
+.navigation ul li .a-1:hover  {
+    background: red;
+    color: #222;
+}
+
+.navigation ul li > .a-2:hover {
+    background: yellow;
+    color: #222;
+}
+
+.navigation ul li > .a-3:hover {
+   background: green;
+   color: #222;
+}
+
+.navigation ul li > .a-4:hover {
+    background: lightskyblue;
+    color: #222;
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#home {
+    background: red;
+}
+
+#home .content {
+    width: 800px;
+    text-align: justify;
+    color: white;
+}
+
+#home .content h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 50px;
+}
+
+#about {
+    background: yellow;
+}
+
+#about .content {
+    width: 800px;
+    text-align: justify;
+    color: white;
+}
+
+#about .content h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 50px;
+}
+
+#services {
+    background: lightgreen;
+}
+
+#services .content {
+    width: 800px;
+    text-align: justify;
+    color: white;
+}
+
+#services .content h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 50px;
+}
+
+#contacts {
+    background: lightskyblue;
+}
+
+#contacts .content {
+    width: 800px;
+    text-align: justify;
+    color: white;
+}
+
+#contacts .content h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 50px;
+}

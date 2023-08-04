@@ -1,0 +1,35 @@
+body {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background-color: black; 
+}
+
+.load {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(blue 0 0), linear-gradient(yellow 0 0), blue;
+    background-repeat: no-repeat;
+    animation: animate 3s infinite;
+    border-radius: 50%;
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    text-shadow: 0 0 10px white;
+}
+
+@keyframes animate {
+    0% {
+        background-size: 100% 0, 0 100%;
+    }
+    30%, 50% {
+        background-size: 100% 0, 100% 100%;
+    }
+    80%, 100% {
+        background-size: 100% 100%, 100% 100%;
+    }
+}

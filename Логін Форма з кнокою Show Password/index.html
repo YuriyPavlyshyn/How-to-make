@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Логін Форма з кнокою Show Password</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-form">
+        <h2>Login</h2>
+        <div class="box">
+            <input type="text" required>
+            <label for="">Name</label>
+        </div>
+        <div class="box">
+            <input type="password" required id="myPassword">
+            <label for="">Password</label>
+        </div>
+        <input type="checkbox" id="check" onclick="myPass()">
+        <label for="check">Show password</label>
+        <input type="submit" value="submit">
+    </div>
+
+<!-- застосування функції з відображення введених символів у поле password -->
+<script>
+    function myPass() {
+        var x = document.getElementById("myPassword");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>
+</body>
+</html>

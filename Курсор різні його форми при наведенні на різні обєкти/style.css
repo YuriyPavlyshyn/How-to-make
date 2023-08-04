@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* ми також можемо задати значення вигляду курсору для всієї сторінки і воно буде спрцьовувати усюди на сторінці окрім тих елементів яким задано песональний інший вигляд курсору */
+    cursor: url(./img/generallyremove_engeneral_13084.png), auto;
+}
+
+body {
+    height: 100vh;
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+}
+
+.container {
+    position: absolute;
+    width: 70%;
+    height: 50%;
+    background: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 25px;
+    gap: 20px;
+}
+
+.container button {
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    color: white;
+    font-size: 22px;
+    text-transform: capitalize; /* задаємо значення першої букви у великому регістрі */
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Ресурс для отримання кольорових іконок - https://icon-icons.com/ */
+/* виявляється властивість cursor має можливість задавати їй значення через url() */
+.container .mario {
+    cursor: url(./img/mario_bros_14603.png), auto;
+}
+
+.container .ninja {
+    cursor: url(./img/ninja_katana_warrior_sword_japan_japanese_asian_assassin_icon_127297.png), auto;
+}
+
+.container .aircraft {
+    cursor: url(./img/airplane_plane_aircraft_transport_travel_icon_183215.png), auto;
+}
+
+.container .ball {
+    cursor: url(./img/games_ball_basketball_15278.png), auto;
+}
+
+.container .house {
+    cursor: url(./img/diagram-06_24511.png), auto;
+}
+
+.container .bird {
+    cursor: url(./img/social_twitter_bird_2556.png), auto;
+}
+
+
+

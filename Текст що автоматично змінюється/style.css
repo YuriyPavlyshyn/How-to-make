@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    height: 100vh;
+    background: url(./img/moon-2048727_1920.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+}
+
+.navbar .logo {
+    font-size: 30px;
+    color: lightgrey;
+}
+
+.navbar ul li {
+    float: left;
+    position: relative;
+}
+
+.navbar ul li a {
+    padding: 15px;
+    color: black;
+    font-style: 14px;
+    display: inline-block;
+    color: lightgrey;
+    transition: .5s;
+}
+
+.navbar ul li a:hover {
+    color: lightskyblue;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container h2 {
+    color: lightgrey;
+    text-shadow: 0 2px 0 rgba(0,0,0,.5);
+    font-size: 4.5rem;
+}
+
+.container p {
+    color: lightgrey;
+    font-size: 20px;
+}
+
+.btn {
+    padding: 15px 30px;
+    background: lightgrey;
+    color: lightskyblue;
+    border: none;
+    border-radius: 15px;
+    display: inline-block;
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+/* фактично створюємо псевдо-елемент з анімацією */
+span::before {
+    content: '';
+    animation: change 15s infinite;
+    color: lightskyblue;
+}
+
+/* під час анімації на різних часових етапах відображаємо різний контент - дуже цікава річ */
+@keyframes change {
+    0% {
+        content: 'Freelancer';
+    }
+    20% {
+        content: 'Photographer';
+    }
+    40% {
+        content: 'Developer';
+    }
+    60% {
+        content: 'QA Engineer';
+    }
+    80% {
+        content: 'Designer';
+    }
+    100% {
+        content: 'Manager';
+    }
+}
+

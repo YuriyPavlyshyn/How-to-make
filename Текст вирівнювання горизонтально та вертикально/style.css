@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.block {
+    background-color: black;
+    width: 400px;
+    height: 400px;
+    color: white;
+    /* Центрування тексту горизонтально */
+
+    /* 1й спосіб:
+    text-align: center; */
+
+    /* 2й спосіб:
+    display: flex;
+    justify-content: center; */
+
+    /* 3й спосіб
+    display: grid;
+    justify-content: center; */
+
+    /* Центрування тексту вертикально */
+
+    /* 1й спосіб
+    line-height: 400px; */
+
+    /* 2й спосіб
+    display: flex;
+    align-items: center; */
+
+    /* 3й спосіб
+    display: grid;
+    align-items: center; */
+
+    /* Центрування тексту вертикально та горизонтально одночасно */
+
+    /* 1й спосіб
+    text-align: center;
+    line-height: 400px; */
+
+    /* 2й спосіб
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    /* 3й спосіб
+    display: grid;
+    justify-content: center;
+    align-items: center; */
+
+    /* 4й новий спосіб */
+    display: grid;
+    place-items: center;
+}

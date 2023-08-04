@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    background: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left li { /* інлайн присвоювати лішками, з блоком ul це не працює */
+    display: inline-block;
+    list-style: none;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.left li a {
+    text-decoration: none;
+    color: white;
+}
+
+.left li:hover, .left li a:hover {
+    background-color: gray;
+    color: black;
+}
+
+.right li {
+    display: inline-block;
+    list-style: none;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.right li a {
+    text-decoration: none;
+    color: white;
+}
+
+.right li:hover, .right li a:hover {
+    background-color: gray;
+    color: black;
+}

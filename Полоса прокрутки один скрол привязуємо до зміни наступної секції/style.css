@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
+.section {
+    scroll-snap-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3em;
+    background: red;
+}
+
+.section:nth-child(1) {
+    background: red;
+}
+
+.section:nth-child(2) {
+    background: green;
+}
+
+.section:nth-child(3) {
+    background: yellow;
+}
+
+.section:nth-child(4) {
+    background: blue;
+}
+
+.section:nth-child(5) {
+    background: blueviolet;
+}

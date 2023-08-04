@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #a8c0ff, #3f2b96);
+}
+
+.rotate-logo {
+    background: rgba(0,0,0,.5);
+    padding: 2rem 4rem;
+    width: 70rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rotate-logo img {
+    width: 7rem;
+    height: 7rem;
+    cursor: pointer;
+    animation: move 1.5s infinite;
+}
+
+/* створюємо ефект крутіння логотипу. можна створити ефект крутіння по горизонталі вказавши значення для осі - x */
+@keyframes move {
+    0% {
+        transform: perspective(23rem) rotateY(0deg);
+    }
+    10% {
+        transform: perspective(23rem) rotateY(-65deg);
+    }
+    90%, 100% {
+        transform: perspective(23rem) rotateY(360deg);
+    }
+}
+
+nav ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 2rem;
+    color: white;
+    font-size: 2rem;
+}
+
+nav ul li a:hover {
+    color: black;
+}

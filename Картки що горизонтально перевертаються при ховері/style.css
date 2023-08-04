@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #262626;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-block {
+    width: 500px;
+    height: 400px;
+    cursor: pointer;
+    perspective: 800px;
+}
+
+.flip-block-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: .9s;
+    transform-style: preserve-3d;
+}
+
+.flip-block:hover .flip-block-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-block-front, .flip-block-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-block-front {
+    background: url(./img/day.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-block-front h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: #000;
+}
+
+.flip-block-back {
+    background: url(./img/night.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+.flip-block-back h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: #fff;
+}
+
+/* перевертання йде вертикально, але його можна змінити на горизонтальне шляхом зміни наступної властивості - transform: rotateY(180deg); на transform: rotateX(180deg); для двох блоків front та back */
+
+

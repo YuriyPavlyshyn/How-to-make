@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(./img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5));
+    box-shadow: 0rem .5rem 1rem rgba(0,0,0,.6);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 10%;
+}
+
+.navbar img {
+    width: 15rem;
+    height: 10rem;
+}
+
+.nav-items {
+    display: flex;
+}
+
+.nav-items li {
+    list-style: none;
+    margin: 0rem 1rem;
+}
+
+.nav-items li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    transition: .5s;
+}
+
+.nav-items li a:hover {
+    color: lightskyblue;
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section .content {
+    color: white;
+    text-align: center;
+}
+
+.section .content h1 {
+    font-size: 4.8rem;
+    margin-bottom: 2rem;
+}
+
+.section .content p {
+    font-size: 1.8rem;
+    margin-bottom: 5rem;
+}
+
+.btn {
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+    border: .2rem solid white;
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+}
+
+.nav-button {
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* створюємо кнопку - бургер */
+.bar, .bar1, .bar2 {
+    width: 4rem;
+    height: 0.5rem;
+    background: white;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    transition: .3s;
+}
+
+/* змінюємо властивості під хрестик, перший елемент зміщення */
+.change .bar {
+    transform: translate(0, 1rem) rotate(-45deg);
+}
+
+/* змінюємо властивості під хрестик, другий елемент приховуємо */
+.change .bar1 {
+   opacity: 0;
+   width: 0;
+}
+
+.change .bar2 {
+    transform: translate(0, -1rem) rotate(45deg);
+}
+
+/* задаємо приховування активного елементу бургер меню для усіх розширень екрану */
+.nav-button {
+    display: none;
+}
+
+/* задаємо відображення активного елементу бургер меню для розширення екрану меше 600px */
+@media screen and (max-width: 600px) {
+    #header {
+        position: fixed;
+        width: 100%;
+        background: #222;
+        box-shadow: none;
+    }
+    .nav-items {
+        position: fixed;
+        left: 0;
+        top: 14rem;
+        width: 100%;
+        height: 110%;
+        flex-direction: column;
+        background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(./img/bg-burger.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        align-items: center;
+        padding-top: 10rem;
+        transition: .5s;
+        transform: translateX(-100%);
+    }
+    .nav-items.hide-show {
+        transform: translateX(0%);
+    }
+
+    .nav-items li {
+        margin: 1rem 0rem;
+    }
+
+    .nav-items li a {
+        display: block;
+    }
+    .nav-button {
+        display: block;
+        padding: 0rem 2.5rem;
+    }
+    #header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .section {
+        padding: 7rem 5rem;
+    }
+}

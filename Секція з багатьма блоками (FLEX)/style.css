@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Центруємо обєкт */
+body {
+    height: 100vh;
+    background: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Центруємо контейнер */
+.container {
+    position: relative;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* в контейнері розміщуємо блоки */
+.box {
+    position: relative;
+    width: 350px;
+    height: 280px;
+    background: white;
+}
+
+/* контент в блоках розміщуємо по середині, як по горизонталі так і по вертикалі */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* зображення по факту більші ніж блоки тому вказуємо такі властивості для того щоб зображення помістити рівно по краях блоків */
+img {
+    width: 100%;
+    height: 100%;
+}

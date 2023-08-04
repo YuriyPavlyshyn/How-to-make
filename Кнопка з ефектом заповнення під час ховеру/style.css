@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #222;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 180px;
+}
+
+button .circle {
+    position: relative;
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: orange;
+    border-radius: 30px;
+   transition: .5s;
+}
+
+/* створення стрілочки */
+button .circle .icon.arrow::before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    right: 1px;
+    top: -5px;
+    transform: rotate(45deg);
+}
+
+button .circle .icon.arrow {
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background: none;
+    left: 10px;
+}
+
+button .circle .icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition: .3s;
+}
+
+button .btn-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 12px 0;
+    margin: 0 0 0 25px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+button:hover .circle {
+    width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+    background: white;
+    transform: translate(15px, 0);
+}

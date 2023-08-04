@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(41, 37, 37);
+}
+
+/* По відео взагалі нічого не чути - йдемо по приборах */
+.circle {
+    position: absolute; /* позиціонуємо по центру */
+    top: 50%; /* центруємо по середині сторінки */
+    left: 50%; /* центруємо по середині сторінки */
+    transform: translate(-50%, -50%); /* центруємо по середині сторінки */
+    width: 100px;
+    height: 100px;
+    text-align: center; /* горизонтально вирівнюємо текст */
+    border: 3px solid gray; /* робимо рамку бокса, яка буде йти відповідно до заданих вище ширини та висоти елемента */
+    border-radius: 50%; /* робимо бордер круглої форми */
+    line-height: 100px; /* центруємо вертикально текст, хоча чому саме на 100 пікселів не зрозуміло */
+    font-size: 15px; /* збільшуємо розмір шрифту */
+    color: aqua;
+    letter-spacing: 3px; /* робимо відступи між буквами на 3 пікселі */
+    text-transform: uppercase; /* робимо усі букви великого регістру */
+    text-shadow: 0 0 20px blue; /* тінь для тексту */
+    box-shadow: 0 0 20px black; /* тінь для бордера */
+}
+
+.circle::before {
+    position: absolute;
+    content: '';
+    top: -2px;
+    left: -2px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    border-top: 3px solid aqua; /*створюємо верхній бордео  */
+    border-right: 3px solid aqua;
+    border-radius: 50%; /* заокруглюємо кути верхнього та правого бордера */
+    animation: animateCircle 2s linear infinite; /* свторюємо саму анімацію */
+}
+
+@keyframes animateCircle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Створюємо окремий елемент - кружок через span та псевдо-елемент :before */
+span {
+    display: block;
+    position: absolute;
+    top: calc(50% - 2px);
+    left: 50%;
+    width: 50%;
+    height: 4px;
+    background: transparent;
+    transform-origin: left;
+    animation: animate 2s linear infinite;
+}
+
+span::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: aqua;
+    border-radius: 50%;
+    top: -5px;
+    right: -8px;
+    box-shadow: 0 0 30px aqua;
+}
+
+/* Запускаємо анімацію для кружка */
+@keyframes animate {
+    0% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(405deg);
+    }
+}

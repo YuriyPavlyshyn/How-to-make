@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h3 {
+    font-size: 40px;
+    color: #04e6e6;
+    position: relative;
+    display: inline;
+}
+
+h3::before {
+    content: '';
+    position: absolute;
+    width: 50px; /* розмір псевдо-елементу */
+    height: 100%; /* розмір псевдо-елементу */
+    background: linear-gradient(#04e6e6, white); /* надаємо градіент кольору бекграунду */
+    left: 10px; /* зміщення елементу вправо */
+    top: -20px;  /* зміщення елементу вверх */ 
+    transform: rotate(25deg); /* перевертаємо елемент на 25 градусів */
+    border-top-left-radius: 35px; /* заокругляємо лівий та верхній бордер */
+    border-bottom-right-radius: 35px; /* заокругляємо правий та нижній бордер */
+    z-index: -1; /* псевдо-елемент переносимо на задній план/  */
+}
+
+h2 {
+    font-size: 50px;
+}

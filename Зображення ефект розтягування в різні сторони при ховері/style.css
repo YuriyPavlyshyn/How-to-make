@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+     background: #222;
+}
+
+.container {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px;
+    box-shadow: 0 0 10px black;
+    margin: 0 auto;
+}
+
+.box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    transition: .5s;
+}
+
+.box-1 {
+    width: 25%;
+    height: 300px;
+    background-image: url(https://media.giphy.com/media/z2POQZ2t8s5Gzp4C7r/giphy-downsized-large.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid wheat;
+}
+
+.box-2 {
+    width: 25%;
+    height: 300px;
+    background-image: url(https://media.giphy.com/media/30pjsLvNyaRY0eoE0b/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid wheat;
+}
+
+.box-3 {
+    width: 25%;
+    height: 300px;
+    background-image: url(https://media.giphy.com/media/9MJ65OWvrNIXnOiNEk/giphy-downsized-large.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid wheat;
+}
+
+.box-1:hover, .box-2:hover, .box-3:hover {
+    animation: animate 1s;
+}
+
+/* застосовуємо ефект розтягнення у різні сторони. для зміни напрямку вертикально - горизонтального розтягування в анімації потрібно зробити зміни значень: з позитивних плюсових на негативні мінусові та навпаки*/
+@keyframes animate {
+    0% {
+        transform: skew(0deg, 0deg);
+    }
+    30% {
+        transform: skew(25deg, 25deg);
+    }
+    40% {
+        transform: skew(-15deg, -15deg);
+    }
+    50% {
+        transform: skew(15deg, 15deg);
+    }
+    65% {
+        transform: skew(5deg, 5deg);
+    }
+    75% {
+        transform: skew(-5deg, -5deg);
+    }
+    100% {
+        transform: skew(0deg, 0deg);
+    }
+}

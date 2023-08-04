@@ -1,0 +1,74 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(#141e30, #243b55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.left-side {
+    float: left;
+    width: 30%;
+    /* застосування багато рівневої структури тіней */
+    box-shadow: 10px 10px 1px rgba(0,0,0,.9),20px 20px 1px rgba(0,0,0,.7), 30px 30px 1px rgba(0,0,0,.6), 40px 40px 1px rgba(0,0,0,.5);
+}
+
+.left-side img {
+    width: 100%;
+}
+
+.right-side {
+    float: right;
+    width: 60%;
+}
+
+.content {
+    color: white;
+    padding: 7% 15%;
+}
+
+.content h3 {
+    text-transform: uppercase;
+    margin: 55px 0;
+}
+
+.content h2 {
+    margin: 15px 0;
+}
+
+.border {
+    height: 2px;
+    width: 40%;
+    background: crimson;
+}
+
+.content p {
+    margin: 30px 0;
+    text-align: justify;
+}
+
+.content a {
+    text-decoration: none;
+    background: crimson;
+    padding: 10px;
+    width: 40%;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 8px;
+}
